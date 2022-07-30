@@ -1,4 +1,4 @@
-﻿namespace Singleton_Connection
+﻿namespace Singleton_Connection.Model
 {
     internal class User
     {

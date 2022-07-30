@@ -1,6 +1,12 @@
-﻿using Singleton_Connection;
+﻿using Singleton_Connection.Controler;
 
-UserTable userTable = new UserTable();
+
+
+ConnectionControler controller1 = new ConnectionControler(@"D:\Projects\Singleton_Connection\Singleton_Connection\Settings\dbSetting.json");
+controller1.Download();
+UserContoller userTable = new UserContoller(SingletonConnection.GetInstance(controller1.defaultsetting).GetConnection());
+userTable.Show();
+userTable = new UserContoller(SingletonConnection.GetInstance(controller1.defaultsetting).GetConnection());
 userTable.Show();
 
 
